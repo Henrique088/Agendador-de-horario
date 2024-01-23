@@ -1,0 +1,15 @@
+
+1. Criar o visual
+
+2. Página de Cadastro
+
+3. Dar movimento javaScript
+
+4. Banco de dados
+
+5. Separar entre usario comum e super usuario
+
+
+Descrição:
+
+mẽs, dia, horario até as 20h temo de30min, barra de anotação de pagamento de cada cliente
