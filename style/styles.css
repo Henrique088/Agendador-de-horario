@@ -3,6 +3,7 @@
 body{
     height: 100%;
     margin: 0;
+    
     /* background-image:url("/assests/img/fundo.png");
     background-size: 80vh;
     background-position-x: 100%;
@@ -19,6 +20,7 @@ body{
     padding: 10px;
     background-color: #ffffff;
     font-family: 'Oswald', sans-serif;
+    align-items:flex-start;
     
     
 }
@@ -109,20 +111,24 @@ body{
 
 .indicativo{
     display:flex;
-    border: 2px solid #d3d6d6;
-    border-radius: 10px;
+    /* border: 2px solid #d3d6d6;
+    border-radius: 10px; */
     align-items: end;
-    width: 40%;
-    height: 1%;
+    width: 60%;
     /* left: auto; */
     position: relative;
-    left: 78%;
+    left: 70%;
     overflow: hidden;
     top: -9.5em;
+    
    
     
 }
 
+.indicativo a, .indicativo span{
+    font-size: 16px;
+    line-height: 30px;
+}
 .indicativo img{
     width: 100px;
     height: 120px;
@@ -159,7 +165,7 @@ li{
 
 footer {
     display: flex;
-    background:rgb(70, 68, 68);
+    background:#EBA836;
     color: rgb(228, 85, 85);
     /* line-height: 10px; */
     padding:  20px 15px;
@@ -243,3 +249,14 @@ a{
     position:absolute;
     width: 100%;
   } */
+
+  .login{
+    border:2px ridge #0f0f0f;
+    border-color:#709938;
+    border-radius: 10px;
+    border-width: 0.3em;
+    padding: 5px;
+    background-color: #EBA836;
+    
+    
+  }
