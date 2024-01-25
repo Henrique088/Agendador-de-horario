@@ -2,13 +2,13 @@
 
 
 nav {
-  width: 300px;
-  background: white;
+  width: 22%;
+  background: #EBA836;
   color: rgba(0, 0, 0, 0.87);
   -webkit-clip-path: circle(24px at 30px 24px);
   clip-path: circle(24px at 32px 24px);
   -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
-  transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+  transition: -webkit-clip-path 0.5625s, clip-path 0.375s; 
 }
 
 nav:hover {
@@ -42,6 +42,7 @@ nav:hover {
   -webkit-transform-origin: 32px 24px;
   -ms-transform-origin: 32px 24px;
   transform-origin: 32px 24px;
+  
 }
 
 .navicon div {
@@ -49,6 +50,7 @@ nav:hover {
   width: 20px;
   height: 2px;
   background: rgba(0, 0, 0, 0.87);
+  
 }
 
 .navicon div:before,
@@ -59,6 +61,7 @@ nav:hover {
   height: 2px;
   background: rgba(0, 0, 0, 0.87);
   position: absolute;
+  
 }
 
 .navicon div:before { top: -7px; }

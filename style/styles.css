@@ -3,6 +3,7 @@
 body{
     height: 100%;
     margin: 0;
+    width: 100%;
     
     /* background-image:url("/assests/img/fundo.png");
     background-size: 80vh;
@@ -11,6 +12,8 @@ body{
     background-repeat: no-repeat;
     width: 100%;
     position:relative; */
+      
+    
     
 }
 
@@ -21,8 +24,6 @@ body{
     background-color: #ffffff;
     font-family: 'Oswald', sans-serif;
     align-items:flex-start;
-    
-    
 }
 
 .cabecalho a{
@@ -44,10 +45,13 @@ body{
 
 .container{
     position:relative;
-    width: 55%;
-    left: 30%;
-    top: -300px;
-    
+    width: 78%;
+    /* left: 20%; */
+    top: -375px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  
 }
 
 #expandedCalendar {
@@ -59,12 +63,15 @@ body{
     /* width: 70%; */
     /* background: #383837; */
     position: relative;
-    right:  20.5%;
+    /* right:  20.5%; */
     color: #faf8f8;
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    left: 15%;
     top: -90px;
-
+    width: 90%;
+    
+    
+    /* text-align: center; */
+    
     
    
     
@@ -77,7 +84,7 @@ body{
     background-color: #ccc8c8;
     border-radius: 4px;
     /* width: 65%; */
-    top: -120%;
+    /* top: -120%; */
     position: relative;
     /* left: 25%; */
 
@@ -103,35 +110,38 @@ body{
 .dia{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 15px;
     position: relative;
-    right: 140px;
+    /* right: 140px; */
     
 }
 
 .indicativo{
     display:flex;
-    /* border: 2px solid #d3d6d6;
-    border-radius: 10px; */
+    border: 4px groove #d3d6d6;
+    border-radius: 10px;
     align-items: end;
-    width: 60%;
-    /* left: auto; */
+    width: 28%;
     position: relative;
-    left: 70%;
-    overflow: hidden;
+    left: 77%;
+    /* overflow: hidden; */
     top: -9.5em;
-    
-   
-    
 }
 
 .indicativo a, .indicativo span{
     font-size: 16px;
     line-height: 30px;
+    font-family: 'Oswald', sans-serif;
 }
+
 .indicativo img{
-    width: 100px;
-    height: 120px;
+    width: 150px;
+    height: 177px;
+    position: absolute;
+    opacity: 0.5;
+    left: 90px;
+    /* top: 0.5px; */
 }
 ul{
    
@@ -165,41 +175,36 @@ li{
 
 footer {
     display: flex;
-    background:#EBA836;
+    background: #EBA836;
     color: rgb(228, 85, 85);
-    /* line-height: 10px; */
-    padding:  20px 15px;
-    /* position: fixed;  */
-    width: 97.69%;
-    height: 100px;
-    
-    /* align-items:baseline; */
-    align-items: end;
-    position: relative;
+    width: 100%;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.contato a{
-    color:#faf8f8;
-    padding-left: 1em;
-    font-size: 1.1em;
-    font-family: 'Oswald', sans-serif;
-    
-   
+.contato {
+    display: flex;
+    align-items: center;
 }
 
-.feito{
+.feito,
+.contato a , .contato span{
+    margin-right: 10px; /* Ajuste a margem conforme necessário */
     color: #fdfdfd;
     font-family: 'Oswald', sans-serif;
-}
-
-.contato{
-     padding-left: 53%;
+    text-decoration: none;
+    margin-left: 15px;
     
 }
-
 a{
     text-decoration: none;
 }
+.contato a:hover {
+    text-decoration: underline; /* Adicione um sublinhado ao passar o mouse sobre os links */
+}
+
+
 
 .buscar{
     display: flex;
@@ -207,16 +212,7 @@ a{
     justify-content: center;
     gap: 30px;
     margin: 10px;
-    /* border: 2px groove rgba(204, 219, 247, 0.8); */
-    /* border-radius: 8px;
-    box-sizing: border-box; */
-    width: 50%;
     position: relative;
-    left: 4%;
-}
-
-.buscar button{
-    height: 80%;
 }
 
 .buscar button:hover{
@@ -260,3 +256,35 @@ a{
     
     
   }
+.border-conteudo{
+    width: 900px;
+    height: 500px;
+    border: 2px groove #EBA836;
+    overflow: auto;
+    top: 20px;
+    position: relative;
+    left: 25%;
+    top: -250px;
+}
+  .conteudo{
+   line-height: 40px;
+    margin: 10px 20px;
+    padding: 20px;
+    /* border: 2px groove #EBA836; */
+    position: relative;
+    overflow: auto;
+  }
+
+  .border-conteudo::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+  }
+  
+  .border-conteudo::-webkit-scrollbar-thumb {
+    background-color: #EBA836; /* Cor da alça da barra de rolagem */
+    border-radius: 6px; /* Borda arredondada da alça */
+  }
+  
+  .border-conteudo::-webkit-scrollbar-track {
+    background-color: transparent; /* Cor da trilha da barra de rolagem */
+  }
+  
