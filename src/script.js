@@ -2,51 +2,72 @@ document.addEventListener('DOMContentLoaded', function () {
     const appointmentsContainer = $('#expandedCalendar');
     const currentDayElement = $('#currentDay');
     let currentDate = new Date();
+
     // valorInput = document.getElementById('calendario').value;
   
 
     function renderCalendar(date) {
         appointmentsContainer.empty();
-    
-        // Configuração para obter nomes de dias da semana em português
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        
-        // Obtém a data formatada em português
-        const formattedDate = date.toLocaleDateString('pt-BR', options);
-    
-        // Extraindo o nome do dia da semana
-        
-    
-        // Atualiza a exibição da data para incluir o nome do dia da semana em português
-        currentDayElement.text(`${formattedDate}`.toUpperCase());
-        
-        
-        for (let i = 8; i < 21; i++) {
-            const timeSlot = new Date(date);
-            timeSlot.setHours(i, 0, 0, 0);
-    
-            const appointmentElement = $('<div class="appointment"></div>');
-            appointmentElement.html(`<p>${timeSlot.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>`);
-            appointmentsContainer.append(appointmentElement);
 
-            appointmentElement.addClass('fadeIn');
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-            if (i != 20){
-                const timeSlot2 = new Date(date);
-                timeSlot2.setHours(i, 30, 0, 0);
-                
-                const appointmentElements = $('<div class="appointment"></div>');
-                appointmentElements.html(`<p>${timeSlot2.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>`);
-                appointmentsContainer.append(appointmentElements);
+    const formattedDate = date.toLocaleDateString('pt-BR', options);
 
-                setTimeout(() => {
-                    appointmentElements.addClass('fadeIn');
-                }, 0);
-            }
-                
+    currentDayElement.text(`${formattedDate}`.toUpperCase());
 
+    for (let i = 8; i < 21; i++) {
+        const timeSlot = new Date(date);
+        timeSlot.setHours(i, 0, 0, 0);
+
+        const appointmentElement = $('<div class="appointment"></div>');
+        const buttonElement = $('<button class="timeSlotButton"></button>');
+        buttonElement.text(timeSlot.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+
+        // Adiciona um identificador ou valor de dados ao botão, se necessário
+        buttonElement.data('time', timeSlot);
+
+        // Adiciona o botão ao elemento do compromisso
+        appointmentElement.append(buttonElement);
+
+        // Adiciona o elemento do compromisso ao contêiner
+        appointmentsContainer.append(appointmentElement);
+
+        appointmentElement.addClass('fadeIn');
+        appointmentElement.addClass('vermelho');
+
+
+        if (i != 20 ) {
+            const timeSlot2 = new Date(date);
+            timeSlot2.setHours(i, 30, 0, 0);
+
+            const appointmentElements = $('<div class="appointment"></div>');
+            const buttonElements = $('<button class="timeSlotButton"></button>');
+            buttonElements.text(timeSlot2.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+
+            // Adiciona um identificador ou valor de dados ao botão, se necessário
+            buttonElements.data('time', timeSlot2);
+
+            // Adiciona o botão ao elemento do compromisso
+            appointmentElements.append(buttonElements);
+
+            // Adiciona o elemento do compromisso ao contêiner
+            appointmentsContainer.append(appointmentElements);
+            ;
+            addFadeInClass(appointmentElements);
+            appointmentElements.addClass('preto');
             
         }
+
+        
+        
+    }
+
+    // Adiciona um manipulador de eventos aos botões
+    $('.timeSlotButton').on('click', function() {
+        // Exemplo de manipulação do clique no botão
+        const timeValue = $(this).data('time');
+        console.log('Botão clicado para o horário:', timeValue);
+    });
         
     }
     

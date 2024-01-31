@@ -78,7 +78,8 @@ body{
 }
 
 .appointment {
-    border: 3px groove #ccc;
+    
+    border: 3px groove #58f012;
     /* padding: 5px; */
     text-align: center;
     background-color: #ccc8c8;
@@ -86,11 +87,21 @@ body{
     /* width: 65%; */
     /* top: -120%; */
     position: relative;
-    /* left: 25%; */
+    left: 25%;
 
     
     
 
+}
+
+.timeSlotButton{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.timeSlotButton:hover{
+    background-color: #EBA836;
 }
 
 .appointment.fadeIn {
@@ -125,7 +136,7 @@ body{
     width: 28%;
     position: relative;
     left: 77%;
-    /* overflow: hidden; */
+    overflow: hidden;
     top: -9.5em;
 }
 
@@ -140,8 +151,9 @@ body{
     height: 177px;
     position: absolute;
     opacity: 0.5;
-    left: 90px;
+    left: 25%;
     /* top: 0.5px; */
+    text-align: center;
 }
 ul{
    
@@ -162,11 +174,13 @@ li{
 }
 
 .vermelho{
-    color: rgb(250, 6, 18);
+    /* color: rgb(250, 6, 18); */
+    border: 3px groove #5842d1;
 }
 
 .preto{
     color: black;
+    border: 3px groove #111111;
 }
 
 .verde{
@@ -213,16 +227,18 @@ a{
     gap: 30px;
     margin: 10px;
     position: relative;
+    
 }
 
-.buscar button:hover{
-    background: #e1e4df;
+.buscar button:hover, #prevDay:hover, #nextDay:hover{
+    background: #EBA836;
 }
 
 .buscar p{
     position: relative;
     left: 10px;
 }
+
 
 ::-webkit-input-placeholder  {
     color: #bebcbc; 
@@ -235,11 +251,23 @@ a{
   } 
 
   #botao{
-    border: 3px solid #0f0f0f;
+    border: 5px groove #324519;
     border-width: 2px;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 5%;
+    cursor:pointer;
   }
 
+  #nextDay, #prevDay{
+    border: 5px groove #324519;
+    border-width: 2px;
+    border-radius: 5px;
+    width: 10%;
+    cursor:pointer;
+    position: relative;
+    height: 25px;
+
+  }
   /* .linha-inferior{
     top: 105%;
     position:absolute;
@@ -257,8 +285,8 @@ a{
     
   }
 .border-conteudo{
-    width: 900px;
-    height: 500px;
+    width: 50%;
+    height: 30%;
     border: 2px groove #EBA836;
     overflow: auto;
     top: 20px;
@@ -288,3 +316,6 @@ a{
     background-color: transparent; /* Cor da trilha da barra de rolagem */
   }
   
+  #calendario:focus {
+    outline: 3px solid #EBA836;
+  }
