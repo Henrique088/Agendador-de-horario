@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,24 +7,24 @@
     <title>Agenda</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- <link rel="stylesheet" href="style/reset.css"> -->
-    <link rel="stylesheet" href="style/styles.css">
-    <link rel="stylesheet" href="style/menu-lateral.css">
+    <link rel="stylesheet" href="{% static '/style/styles.css' %}">
+    <link rel="stylesheet" href="{% static '/style/menu-lateral.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="seu-arquivo-de-scripts.js"></script>
+    
    
 </head>
 <body>
 
     <header class="cabecalho">
         <div class="cab-img-name">
-            <img src="/assests/img/terapia.png" class="img-header">
+            <img src="{% static '/assests/img/terapia.png' %}" class="img-header">
             <a> Georgiane Ribeiro </a>
         </div>
         
-        <a href="/templates/login.html" class="login">Login</a>
+        <a href="{% url 'login' %}" class="login">Login</a>
     </header>
     <hr>
     <nav>
@@ -31,9 +32,9 @@
           <div></div>
         </div>
       
-        <a class="a-lateral" href="/index.html">Home</a>
-        <a class="a-lateral" href="./templates/terapia.html">O que é a terapia?</a>
-        <a class="a-lateral" href="./templates/psciologia.html">O que é a psicologia?</a>
+        <a class="a-lateral" href="{% url 'index' %}">Home</a>
+        <a class="a-lateral" href="{% url 'terapia' %}">O que é a terapia?</a>
+        <a class="a-lateral" href="{% url 'psicologia' %}">O que é a psicologia?</a>
         <a class="a-lateral" href="/templates/dino-google.html">O que é a radiestezia?</a>
         <a class="a-lateral" href="/templates/EBAC.html">Georgiane Ribeiro</a>
         <a class="a-lateral" href="/templates/sobre.html">Sobre</a>
@@ -63,7 +64,7 @@
                 <li><a>Preto - Indisponivel</a></li>
                 <li><a><span style="color: rgb(24, 68, 214);">Azul</span> - Agendado por você</a></li>
             </ul>
-            <img src="/assests/img/arvore.png" alt="flor" width="100" height="300">
+            <img src="{% static '/assests/img/arvore.png' %}" alt="flor" width="100" height="300">
         </div>
     
         <div id="expandedCalendar">
@@ -86,6 +87,6 @@
 
         </div>
     </footer>
-    <script src="src/script.js"></script>
+    <script src="{% static '/src/script.js' %}"></script>
 </body>
 </html>

@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body{
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    
+    /* background-image:url("/assests/img/fundo.png");
+    background-size: 80vh;
+    background-position-x: 100%;
+    background-position-y: 85%;
+    background-repeat: no-repeat;
+    width: 100%;
+    position:relative; */
+      
+    
+    
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    align-items:flex-start;
+}
+
+.cabecalho a{
+    position: relative;
+    top: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.img-header{
+    width: 6%;
+}
+
+.cab-img-name{
+    display: flex;
+    gap: 10px;
+   
+}
+
+.container{
+    position:relative;
+    width: 78%;
+    /* left: 20%; */
+    top: -375px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+#expandedCalendar {
+    display: grid;
+    grid-template-columns: repeat(7, 9%); /* Adapte conforme necessário para o número de horas desejado */
+    grid-template-rows: repeat(7, 15%);
+    grid-gap: 20px;
+    margin-top: 10px;
+    /* width: 70%; */
+    /* background: #383837; */
+    position: relative;
+    /* right:  20.5%; */
+    color: #faf8f8;
+    left: 15%;
+    top: -90px;
+    width: 90%;
+    
+    
+    /* text-align: center; */
+    
+    
+   
+    
+}
+
+.appointment {
+    
+    border: 3px groove #58f012;
+    /* padding: 5px; */
+    text-align: center;
+    background-color: #ccc8c8;
+    border-radius: 4px;
+    /* width: 65%; */
+    /* top: -120%; */
+    position: relative;
+    left: 25%;
+
+    
+    
+
+}
+
+.timeSlotButton{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.timeSlotButton:hover{
+    background-color: #EBA836;
+}
+
+.appointment.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+}
+.dia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    /* right: 140px; */
+    
+}
+
+.indicativo{
+    display:flex;
+    border: 4px groove #d3d6d6;
+    border-radius: 10px;
+    align-items: end;
+    width: 28%;
+    position: relative;
+    left: 77%;
+    overflow: hidden;
+    top: -9.5em;
+}
+
+.indicativo a, .indicativo span{
+    font-size: 16px;
+    line-height: 30px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.indicativo img{
+    width: 150px;
+    height: 177px;
+    position: absolute;
+    opacity: 0.5;
+    left: 25%;
+    /* top: 0.5px; */
+    text-align: center;
+}
+ul{
+   
+   list-style-type: square; 
+   color: #383837;
+   
+}
+
+li{
+    padding-top: 6px;
+    padding-right: 2px;
+    padding-left: 1px;
+    font-size: small;
+    
+}
+.azul{
+    color: rgb(6, 43, 250);
+}
+
+.vermelho{
+    /* color: rgb(250, 6, 18); */
+    border: 3px groove #5842d1;
+}
+
+.preto{
+    color: black;
+    border: 3px groove #111111;
+}
+
+.verde{
+    color: #5de90c;
+}
+
+footer {
+    display: flex;
+    background: #EBA836;
+    color: rgb(228, 85, 85);
+    width: 100%;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contato {
+    display: flex;
+    align-items: center;
+}
+
+.feito,
+.contato a , .contato span{
+    margin-right: 10px; /* Ajuste a margem conforme necessário */
+    color: #fdfdfd;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    margin-left: 15px;
+    
+}
+a{
+    text-decoration: none;
+}
+.contato a:hover {
+    text-decoration: underline; /* Adicione um sublinhado ao passar o mouse sobre os links */
+}
+
+
+
+.buscar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 10px;
+    position: relative;
+    
+}
+
+.buscar button:hover, #prevDay:hover, #nextDay:hover{
+    background: #EBA836;
+}
+
+.buscar p{
+    position: relative;
+    left: 10px;
+}
+
+
+::-webkit-input-placeholder  {
+    color: #bebcbc; 
+    font-style: italic;
+  }
+  input:-moz-placeholder,
+  textarea:-moz-placeholder{
+    color: #bebcbc;
+    font-style: italic;
+  } 
+
+  #botao{
+    border: 5px groove #324519;
+    border-width: 2px;
+    border-radius: 10px;
+    width: 5%;
+    cursor:pointer;
+  }
+
+  #nextDay, #prevDay{
+    border: 5px groove #324519;
+    border-width: 2px;
+    border-radius: 5px;
+    width: 10%;
+    cursor:pointer;
+    position: relative;
+    height: 25px;
+
+  }
+  /* .linha-inferior{
+    top: 105%;
+    position:absolute;
+    width: 100%;
+  } */
+
+  .login{
+    border:2px ridge #0f0f0f;
+    border-color:#709938;
+    border-radius: 10px;
+    border-width: 0.3em;
+    padding: 5px;
+    background-color: #EBA836;
+    
+    
+  }
+.border-conteudo{
+    width: 50%;
+    height: 30%;
+    border: 2px groove #EBA836;
+    overflow: auto;
+    top: 20px;
+    position: relative;
+    left: 25%;
+    top: -250px;
+}
+  .conteudo{
+   line-height: 40px;
+    margin: 10px 20px;
+    padding: 20px;
+    /* border: 2px groove #EBA836; */
+    position: relative;
+    overflow: auto;
+  }
+
+  .border-conteudo::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+  }
+  
+  .border-conteudo::-webkit-scrollbar-thumb {
+    background-color: #EBA836; /* Cor da alça da barra de rolagem */
+    border-radius: 6px; /* Borda arredondada da alça */
+  }
+  
+  .border-conteudo::-webkit-scrollbar-track {
+    background-color: transparent; /* Cor da trilha da barra de rolagem */
+  }
+  
+  #calendario:focus {
+    outline: 3px solid #EBA836;
+  }
