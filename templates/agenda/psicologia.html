@@ -1,42 +1,7 @@
+{% extends 'agenda/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>terapia</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- <link rel="stylesheet" href="style/reset.css"> -->
-    <link rel="stylesheet" href="{% static '/style/styles.css' %}">
-    <link rel="stylesheet" href="{% static '/style/menu-lateral.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-   
-</head>
-<body>
-    <header class="cabecalho">
-        <div class="cab-img-name">
-            <img src="{% static '/assests/img/terapia.png' %}" class="img-header">
-            <a> Georgiane Ribeiro </a>
-        </div>
-        
-        <a href="/templates/login.html" class="login">Login</a>
-    </header>
-    <hr>
-   
-    <nav>
-        <div class="navicon">
-          <div></div>
-        </div>
-      
-        <a class="a-lateral" href="{% url 'index' %}">Home</a>
-        <a class="a-lateral" href="{% url 'terapia' %}">O que é a terapia?</a>
-        <a class="a-lateral" href="{% url 'psicologia' %}">O que é a psicologia?</a>
-        <a class="a-lateral" href="/templates/dino-google.html">O que é a radiestezia?</a>
-        <a class="a-lateral" href="/templates/EBAC.html">Georgiane Ribeiro</a>
-        <a class="a-lateral" href="/templates/sobre.html">Sobre</a>
-      
-      </nav>
+{% block content %}
+
     <div class="border-conteudo">
 
 
@@ -57,16 +22,4 @@
         </div>
     </div>
     
-     
-      <footer>
-        <a class="feito">Feito por: Henrique Ribeiro</a>
-        <div class="contato">
-            <a>Contatos:</a>
-            <a href="https://www.instagram.com/henriqueribeiro88/" target="_blank">Instagram  <i class="fa fa-instagram"></i></a>
-            <a href="https://github.com/Henrique088/" target="_blank">Github <i class="fa fa-github"></i></a>
-            <a>(31)99261-2529 <i class="fa fa-whatsapp"></i></a>
-
-        </div>
-    </footer>
-</body>
-</html>
+{% endblock %}

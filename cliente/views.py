@@ -9,7 +9,7 @@ def login(request):
     return render(request, 'login.html')
 
 def psicologia(request):
-    return render(request, 'psicologia.html')
+    return render(request, 'agenda/psicologia.html')
 
 def terapia(request):
-    return render(request, 'terapia.html')
+    return render(request, 'agenda/terapia.html')
