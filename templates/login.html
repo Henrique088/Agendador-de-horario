@@ -15,56 +15,33 @@
         <div class="content">      
           <!--FORMULÁRIO DE LOGIN-->
           <div id="login">
-            <form method="post" action=""> 
-              <h1>Login</h1> 
-              <p> 
-                <label for="email_login">Seu e-mail</label>
-                <input id="email_login" name="email_login" required="required" type="email" placeholder="fulano@gmail.com"/>
-              </p>
+            <form method="post" action="{% url 'login' %}"> 
+              <h1> Login</h1>
+              {% csrf_token %}
               
-              <p> 
-                <label for="senha_login">Sua senha</label>
-                <input id="senha_login" name="senha_login" required="required" type="password" placeholder="123456" /> 
-              </p>
               
-              <p> 
-                <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
-                <label for="manterlogado">Manter-me logado</label>
-              </p>
-              
-              <p> 
-                <input type="submit" value="Logar" /> 
-              </p>
-              
+             {{ login_form.as_p}}
+
+             <p> 
+              <input type="submit" value="login" name="login"/> 
+            </p>
               <p class="link">
                 Ainda não tem conta?
                 <a href="#paracadastro">Cadastre-se</a>
               </p>
-            </form>
+              </form>
           </div>
     
           <!-- FORMULÁRIO DE CADASTRO -->
           <div id="cadastro">
-            <form method="post" action=""> 
+            <form method="post" action="{% url 'login' %}"> 
               <h1>Cadastro</h1> 
               
-              <p> 
-                <label for="nome_cad">Seu nome</label>
-                <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Henrique Ribeiro" />
-              </p>
+              {% csrf_token %}
+              {{ cadastro_form.as_p}}
               
               <p> 
-                <label for="email_cad">Seu e-mail</label>
-                <input id="email_cad" name="email_cad" required="required" type="email" placeholder="fulano@gmail.com"/> 
-              </p>
-              
-              <p> 
-                <label for="senha_cad">Sua senha</label>
-                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="123456"/>
-              </p>
-              
-              <p> 
-                <input type="submit" value="Cadastrar"/> 
+                <input type="submit" value="Cadastro" name="cadastro"/> 
               </p>
               
               <p class="link">  
